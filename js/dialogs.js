@@ -8,6 +8,12 @@
 
 (function() {
 
+    var util = {
+        slice: function (array) {
+            return Array.prototype.slice.call(array);
+        }
+    };
+
     window.dialogs = {
         /**
          *  $.dialogs.alert('massage', fuction(r){
