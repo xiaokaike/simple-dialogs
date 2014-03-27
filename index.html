@@ -11,20 +11,37 @@
 
 	<script>
 		$(function(){
-			$('#alert_button').on('click', function () {
+			$('#alertBtn').on('click', function () {
 				dialogs.alert('fdfdfsdfds', function (){
-
+					console.log('---');
 				});
 			});
 
+			$('#confirmBtn').on('click', function () {
+				dialogs.confirm('fdfdfsdfds', function (r){
+					console.log('---');
+				});
+			});
 		});
-
 	</script>
+
+	<style>
+		body{ background-color: #fff;}
+		.box{ padding: 10px; margin-bottom: 10px;}
+
+	</style>
 </head>
 <body>
 
+	<h3>some test about dialogs</h3>
 
-	<input id="alert_button" type="button" value="Alert对话框" />
-	
+	<div class="box">
+		<input id="alertBtn" type="button" value="Alert对话框" />
+	</div>
+
+	<div class="box">
+		<input id="confirmBtn" type="button" value="confirm" />
+	</div>
+
 </body>
 </html>
