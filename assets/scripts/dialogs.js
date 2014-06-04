@@ -3,9 +3,6 @@
  *  
  */
 
-
-
-
 (function() {
 
     var util = {
@@ -43,7 +40,7 @@
             if(type === 'confirm'){
                 html += '<div class="dialog-panel"><div id="dialogCancel" class="dialog-btn tui-btn">取消</div><div id="dialogSure" class="dialog-btn tui-btn">确定</div></div>';
             }else{
-                html += '<div class="dialog-panel"><div id="dialogSure" class="dialog-btn tui-btn">确定</div></div>';
+                html += '<div class="dialog-panel"><div id="dialogSure" class="dialog-btn tui-btn">确定<span>3</span></div></div>';
             }
 
             html +='</div></div>';
@@ -101,6 +98,12 @@
                 break;
             }
         },
+        bindEvent: function(){
+            
+        },
+        unbindEvent: function(){
+            
+        },
         // 隐藏
         _hide: function () {
             $('#dialogContainer').remove();
@@ -149,7 +152,4 @@
             }
         }
     };
-
-
-
 })();
